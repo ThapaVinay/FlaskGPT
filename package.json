@@ -1,0 +1,23 @@
+{
+  "name": "flaskgpt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThapaVinay/FlaskGPT.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ThapaVinay/FlaskGPT/issues"
+  },
+  "homepage": "https://github.com/ThapaVinay/FlaskGPT#readme",
+  "dependencies": {
+    "tailwindcss": "^3.3.3"
+  }
+}
