@@ -11,13 +11,42 @@
     <title>FlaskGPT</title>
 </head>
 
-<body class="bg-chatblack-50" >
+<body class="bg-chatblack-50">
     <div class="flex h-[100vh]  text-white">
-        <div class="left bg-black w-2/12">
-            left
+        <div class="left bg-[#202123] w-2/12">
+            <button
+                class="w-[90%] m-3 ms-2 p-3 text-sm cursor-pointer border-white/20 space-x-2 border rounded-md flex mx-4 justify-start items-center hover:bg-gray-500/10 ">
+                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
+                    stroke-linejoin="round" class="h-4 w-4" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+                <span>New Chat</span>
+            </button>
+
+            <div class="chats flex flex-col justify-center items-center">
+                <div class="w-[90%] my-1 chat flex cursor-pointer space-x-2 bg-gray-700 rounded-md p-3 text-sm justify-start items-center">
+                    <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
+                        stroke-linejoin="round" class="h-4 w-4" height="1em" width="1em"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                    </svg>
+                    <span>Clone AI Assistant</span>
+                </div>
+                <div class="w-[90%] my-1 chat flex cursor-pointer space-x-2 bg-gray-700 rounded-md p-3 text-sm justify-start items-center">
+                    <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
+                        stroke-linejoin="round" class="h-4 w-4" height="1em" width="1em"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                    </svg>
+                    <span>Clone AI Assistant</span>
+                </div>
+            </div>
+
         </div>
-        <div class="right w-10/12 flex justify-center items-center flex-col" style="overflow-x: hidden; overflow-y:hidden;">
-            <div class="text-4xl font-bold my-8">
+        <div class="right w-10/12 flex justify-center items-center flex-col"
+            style="overflow-x: hidden; overflow-y:hidden;">
+            <div class="text-4xl font-bold my-5">
                 FlaskGPT
             </div>
             <div class="itemsrow flex py-3 w-[50vw] justify-around">
