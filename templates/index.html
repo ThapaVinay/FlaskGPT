@@ -1,12 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="shortcut icon" href="https://freelogopng.com/images/all_img/1681039084chatgpt-icon.png"
+        type="image/x-icon">
+    <title>FlaskGPT</title>
 </head>
-<body>
-    <h1>Welcome !</h1>
+
+<body class="bg-chatblack-50" >
+    <div class="flex h-[100vh]  text-white">
+        <div class="left bg-black w-2/12">
+            left
+        </div>
+        <div class="right w-10/12 flex justify-center items-center flex-col" style="overflow-x: hidden; overflow-y:hidden;">
+            <div class="text-4xl font-bold my-8">
+                FlaskGPT
+            </div>
+            <div class="itemsrow flex py-3 w-[50vw] justify-around">
+                <div class="examples flex flex-col justify-center items-center">
+                    <svg stroke="currentColor" fill="none" stroke-width="1.5" viewBox="0 0 24 24" stroke-linecap="round"
+                        stroke-linejoin="round" class="h-6 w-6 __web-inspector-hide-shortcut__" height="1em" width="1em"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <div class="py-4"> Examples</div>
+                    <button
+                        class="bg-gray-600   w-[17vw]   text-sm hover:bg-gray-700 py-3 px-4 mx-4 my-2 rounded-md">What
+                        are the
+                        symptoms of COVID-19?</button>
+                    <button
+                        class="bg-gray-600   w-[17vw]   text-sm hover:bg-gray-700 py-3 px-4 mx-4 my-2 rounded-md">How
+                        do I solve a quadratic equation?</button>
+                    <button
+                        class="bg-gray-600   w-[17vw]   text-sm hover:bg-gray-700 py-3 px-4 mx-4 my-2 rounded-md">Explain
+                        the concept of artificial intelligence.</button>
+                </div>
+                <div class="cap flex flex-col justify-center items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" aria-hidden="true" class="h-6 w-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"></path>
+                    </svg>
+                    <div class="py-4">Capabilities</div>
+                    <button
+                        class="bg-gray-600   w-[17vw]   text-sm hover:bg-gray-700 py-3 px-4 mx-4 my-2 rounded-md">Remembers
+                        what user said earlier in the conversation
+                    </button>
+                    <button
+                        class="bg-gray-600   w-[17vw]   text-sm hover:bg-gray-700 py-3 px-4 mx-4 my-2 rounded-md">Allows
+                        user to provide follow-up corrections</button>
+                    <button
+                        class="bg-gray-600   w-[17vw]   text-sm hover:bg-gray-700 py-3 px-4 mx-4 my-2 rounded-md">Trained
+                        to
+                        decline inappropriate requests</button>
+                </div>
+                <div class="lim flex flex-col justify-center items-center">
+                    <svg stroke="currentColor" fill="none" stroke-width="1.5" viewBox="0 0 24 24" stroke-linecap="round"
+                        stroke-linejoin="round" class="h-6 w-6" height="1em" width="1em"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z">
+                        </path>
+                        <line x1="12" y1="9" x2="12" y2="13"></line>
+                        <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                    </svg>
+                    <div class="py-4">Limitations</div>
+                    <button
+                        class="bg-gray-600   w-[17vw]   text-sm hover:bg-gray-700 py-3 px-4 mx-4 my-2 rounded-md">May
+                        occasionally generate incorrect information</button>
+                    <button
+                        class="bg-gray-600   w-[17vw]   text-sm hover:bg-gray-700 py-3 px-4 mx-4 my-2 rounded-md">May
+                        occasionally produce harmful instructions or biased content</button>
+                    <button
+                        class="bg-gray-600   w-[17vw]   text-sm hover:bg-gray-700 py-3 px-4 mx-4 my-2 rounded-md">Limited
+                        knowledge of world and events after 2021</button>
+                </div>
+            </div>
+
+            <div class="input w-full mb-5 text-center my-12 ml-6">
+                <input class="w-[70%] p-4  bg-gray-600 rounded-md" type="text" placeholder="Send a Message" name="text"
+                    id="text">
+                <button class="relative -left-8 opacity-70">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" class="h-4 w-4 m-1 md:m-0"
+                        stroke-width="2">
+                        <path
+                            d="M.5 1.163A1 1 0 0 1 1.97.28l12.868 6.837a1 1 0 0 1 0 1.766L1.969 15.72A1 1 0 0 1 .5 14.836V10.33a1 1 0 0 1 .816-.983L8.5 8 1.316 6.653A1 1 0 0 1 .5 5.67V1.163Z"
+                            fill="currentColor"></path>
+                    </svg>
+                </button>
+                <div class="text-xs py-2 opacity-70">Free Research Preview. ChatGPT may produce inaccurate information
+                    about people, places, or facts. <a class="underline"
+                        href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes">ChatGPT July 20
+                        Version</a></div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>

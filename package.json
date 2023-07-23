@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tailwind": "npx tailwindcss -i ./static/input.css -o ./static/css/main.css --watch"
   },
   "repository": {
     "type": "git",
@@ -17,7 +18,7 @@
     "url": "https://github.com/ThapaVinay/FlaskGPT/issues"
   },
   "homepage": "https://github.com/ThapaVinay/FlaskGPT#readme",
-  "dependencies": {
+  "devDependencies": {
     "tailwindcss": "^3.3.3"
   }
 }

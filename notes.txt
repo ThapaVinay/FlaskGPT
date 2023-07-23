@@ -1,0 +1,2 @@
+1. Tailwind CSS providesingle purpose utility classes.
+2. SASS : Syntactically awesome stylesheet -> provides us with options like variables, functions, loops, etc.
