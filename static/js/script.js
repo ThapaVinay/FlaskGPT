@@ -11,6 +11,7 @@ async function postData(url="", data={})
     return response.json();
 }
 
+
 sendButton.addEventListener("click", async ()=>{
     question = document.getElementById("question").value;
     document.getElementById("question").value = "";
@@ -21,6 +22,12 @@ sendButton.addEventListener("click", async ()=>{
 
     // Get the answer and populate
     let result = await postData("/api", {"question" : question});
-    ans.innerHTML = result.result;
+    const formatResult = result.result.replace(/\n/g, '<br>');
+    ans.innerHTML = formatResult;
+    // ans.innerHTML = result.result;
 
 })
+
+
+
+

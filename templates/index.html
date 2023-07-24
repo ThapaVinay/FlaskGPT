@@ -26,11 +26,17 @@
                     <line x1="12" y1="5" x2="12" y2="19"></line>
                     <line x1="5" y1="12" x2="19" y2="12"></line>
                 </svg>
-                <span>New Chat</span>
+                <span><script>"loadign"</script></span>
             </button>
 
             <div class="text-xs text-gray-500 font-semibold mx-4 my-2">Today</div>
-            <div class="chats flex flex-col justify-center items-center">
+
+
+
+
+            <div class="chats flex flex-col justify-center items-center space-y-2">
+
+                {% for chat in mychats %}
                 <div
                     class="w-[90%] my-1 chat flex cursor-pointer space-x-2 bg-gray-700 rounded-md p-3 text-sm justify-start items-center">
                     <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
@@ -38,17 +44,10 @@
                         xmlns="http://www.w3.org/2000/svg">
                         <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
                     </svg>
-                    <span>Luffy -Who is he?</span>
+                    <span>{{chat.question}}</span>
                 </div>
-                <div
-                    class="w-[90%] my-1 chat flex cursor-pointer space-x-2 bg-gray-700 rounded-md p-3 text-sm justify-start items-center">
-                    <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
-                        stroke-linejoin="round" class="h-4 w-4" height="1em" width="1em"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-                    </svg>
-                    <span>Clone AI Assistant</span>
-                </div>
+
+                {% endfor %}
             </div>
 
         </div>
@@ -155,10 +154,7 @@
             <div class="box2 py-7 bg-gray-600 flex justify-center w-full items-center">
                 <div class="box w-[60vw] flex justify-start items-center space-x-6">
                     <img class="w-9" src="https://chat.openai.com/favicon.ico" alt="photo" srcset="">
-                    <div id="ans">Monkey D. Luffy is a young and spirited pirate with the dream of becoming the Pirate King. He
-                        gains the ability to stretch his body like rubber after eating a Devil Fruit called the Gum-Gum
-                        Fruit (Gomu Gomu no Mi). The fruit grants him incredible strength and elasticity, but it also
-                        makes him unable to swim.</div>
+                    <div id="ans">loading..</div>
                 </div>
 
             </div>
