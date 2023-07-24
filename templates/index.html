@@ -8,12 +8,17 @@
     <link rel="stylesheet" href="/static/css/main.css">
     <link rel="shortcut icon" href="https://freelogopng.com/images/all_img/1681039084chatgpt-icon.png"
         type="image/x-icon">
+    <style>
+        .right2 {
+            display: none;
+        }
+    </style>
     <title>FlaskGPT</title>
 </head>
 
 <body class="bg-chatblack-50">
     <div class="flex h-[100vh]  text-white">
-        <div class="left bg-[#202123] w-2/12">
+        <div class="left bg-[#202123] w-3/12">
             <button
                 class="w-[90%] m-3 ms-2 p-3 text-sm cursor-pointer border-white/20 space-x-2 border rounded-md flex mx-4 justify-start items-center hover:bg-gray-500/10 ">
                 <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
@@ -24,16 +29,19 @@
                 <span>New Chat</span>
             </button>
 
+            <div class="text-xs text-gray-500 font-semibold mx-4 my-2">Today</div>
             <div class="chats flex flex-col justify-center items-center">
-                <div class="w-[90%] my-1 chat flex cursor-pointer space-x-2 bg-gray-700 rounded-md p-3 text-sm justify-start items-center">
+                <div
+                    class="w-[90%] my-1 chat flex cursor-pointer space-x-2 bg-gray-700 rounded-md p-3 text-sm justify-start items-center">
                     <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
                         stroke-linejoin="round" class="h-4 w-4" height="1em" width="1em"
                         xmlns="http://www.w3.org/2000/svg">
                         <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
                     </svg>
-                    <span>Clone AI Assistant</span>
+                    <span>Luffy -Who is he?</span>
                 </div>
-                <div class="w-[90%] my-1 chat flex cursor-pointer space-x-2 bg-gray-700 rounded-md p-3 text-sm justify-start items-center">
+                <div
+                    class="w-[90%] my-1 chat flex cursor-pointer space-x-2 bg-gray-700 rounded-md p-3 text-sm justify-start items-center">
                     <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
                         stroke-linejoin="round" class="h-4 w-4" height="1em" width="1em"
                         xmlns="http://www.w3.org/2000/svg">
@@ -44,7 +52,7 @@
             </div>
 
         </div>
-        <div class="right w-10/12 flex justify-center items-center flex-col"
+        <div class="right1 w-full flex justify-center items-center flex-col"
             style="overflow-x: hidden; overflow-y:hidden;">
             <div class="text-4xl font-bold my-5">
                 FlaskGPT
@@ -118,8 +126,45 @@
                 </div>
             </div>
 
-            <div class="input w-full mb-5 text-center my-12 ml-6">
-                <input class="w-[70%] p-4  bg-gray-600 rounded-md" type="text" placeholder="Send a Message" name="text"
+            <div class="input w-full mb-5 text-center my-16 ml-6">
+                <input class="w-[60%] p-4  bg-gray-600 rounded-md" type="text" placeholder="Send a Message" name="text"
+                    id="question">
+                <button id="sendButton" class="relative -left-8 opacity-70">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" class="h-4 w-4 m-1 md:m-0"
+                        stroke-width="2">
+                        <path
+                            d="M.5 1.163A1 1 0 0 1 1.97.28l12.868 6.837a1 1 0 0 1 0 1.766L1.969 15.72A1 1 0 0 1 .5 14.836V10.33a1 1 0 0 1 .816-.983L8.5 8 1.316 6.653A1 1 0 0 1 .5 5.67V1.163Z"
+                            fill="currentColor"></path>
+                    </svg>
+                </button>
+                <div class="text-xs py-2 opacity-70">Free Research Preview. ChatGPT may produce inaccurate information
+                    about people, places, or facts. <a class="underline"
+                        href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes">ChatGPT July 20
+                        Version</a></div>
+            </div>
+        </div>
+
+        <div class="right2 w-full flex flex-col items-center h-fit">
+            <div class="box1 py-7 flex justify-start w-[60vw] items-center space-x-6">
+                <img class="w-9"
+                    src="https://chat.openai.com/_next/image?url=https%3A%2F%2Flh3.googleusercontent.com%2Fa%2FAAcHTtcHVay9jhsui35KK80QMytUQA_bbuwdGGVHO6L9-YOZzcs%3Ds96-c&w=48&q=75"
+                    alt="photo" srcset="">
+                <div id="ques">who is luffy?</div>
+            </div>
+
+            <div class="box2 py-7 bg-gray-600 flex justify-center w-full items-center">
+                <div class="box w-[60vw] flex justify-start items-center space-x-6">
+                    <img class="w-9" src="https://chat.openai.com/favicon.ico" alt="photo" srcset="">
+                    <div id="ans">Monkey D. Luffy is a young and spirited pirate with the dream of becoming the Pirate King. He
+                        gains the ability to stretch his body like rubber after eating a Devil Fruit called the Gum-Gum
+                        Fruit (Gomu Gomu no Mi). The fruit grants him incredible strength and elasticity, but it also
+                        makes him unable to swim.</div>
+                </div>
+
+            </div>
+
+            <div class="input w-full mb-5 fixed bottom-0 text-center my-12 ml-6">
+                <input class="w-[60%] p-4  bg-gray-600 rounded-md" type="text" placeholder="Send a Message" name="text"
                     id="text">
                 <button class="relative -left-8 opacity-70">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" class="h-4 w-4 m-1 md:m-0"
@@ -134,8 +179,9 @@
                         href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes">ChatGPT July 20
                         Version</a></div>
             </div>
+
         </div>
-    </div>
+        <script src="/static/js/script.js"></script>
 </body>
 
 </html>
